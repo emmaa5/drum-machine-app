@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import "./Buttons.js";
+import { Buttons } from "./Buttons.js";
+import bootstrap from "bootstrap";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <header>
+        <h1>Drum machine</h1>
+        <p id="description">
+          By <a href="http://">Emma</a> for{" "}
+          <a href="http://">Freecodecamp front end libraries and frameworks</a>{" "}
+          certificate project
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <main id="drum-machine" className = "container d-flex">
+        <div id="display"></div>
+        <Buttons />
+      </main>
     </div>
   );
 }
