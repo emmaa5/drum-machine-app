@@ -3,8 +3,13 @@ import "./App.css";
 import "./Buttons.js";
 import { Buttons } from "./Buttons.js";
 import bootstrap from "bootstrap";
+import React from "react";
 
 function App() {
+  const [state, setState] = React.useState({
+    currentAudio: "Press any of the buttons",
+  });
+
   return (
     <div className="App">
       <header>
@@ -15,8 +20,8 @@ function App() {
           certificate project
         </p>
       </header>
-      <main id="drum-machine" className = "container d-flex">
-        <div id="display"></div>
+      <main id="drum-machine" className="container d-flex">
+        <div id="display">{state.currentAudio}</div>
         <Buttons />
       </main>
     </div>
